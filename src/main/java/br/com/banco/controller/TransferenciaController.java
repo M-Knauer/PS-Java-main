@@ -24,9 +24,10 @@ public class TransferenciaController {
 	public Page<Transferencia> findTransferencias(
 			@RequestParam(value = "minDate", defaultValue = "") String minDate,
 			@RequestParam(value = "maxDate", defaultValue = "") String maxDate,
+			@RequestParam(value = "nome", defaultValue = "") String nome,
 			@PathVariable Conta conta_id, 
 			Pageable pageable ) {
 		
-		return ts.findTransferencias(minDate, maxDate, conta_id, pageable);
+		return ts.findTransferencias(conta_id, minDate, maxDate, nome, pageable);
 	}
 }

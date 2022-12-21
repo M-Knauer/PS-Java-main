@@ -41,7 +41,7 @@ public class Transferencia implements Serializable {
 	private String tipo;
 	
 	@Column(name = "nome_operador_transacao", nullable = true, length = 50)
-	private String nomeOperadorTransacao;
+	private String nome;
 	
 	@ManyToOne
 	@JoinColumn(name = "conta_id")

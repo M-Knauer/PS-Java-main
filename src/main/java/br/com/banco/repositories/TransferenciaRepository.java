@@ -15,9 +15,7 @@ import br.com.banco.entities.Transferencia;
 public interface TransferenciaRepository extends JpaRepository<Transferencia, Long> {
 	
 	@Query("SELECT obj FROM Transferencia obj "
-			+ "WHERE obj.conta = :conta_id AND obj.dataTransferencia BETWEEN :min AND :max")
-	Page<Transferencia> findTransferencias(Conta conta_id, LocalDate min, LocalDate max, Pageable pageable);
-	
-
+			+ "WHERE obj.conta = :conta_id AND obj.dataTransferencia BETWEEN :min AND :max AND (obj.nome = :nome OR ISNULL(:nome, '') = '')")
+	Page<Transferencia> findTransferencias(Conta conta_id, LocalDate min, LocalDate max, String nome, Pageable pageable);
 	
 }
