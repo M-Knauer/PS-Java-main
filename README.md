@@ -1,1 +1,8 @@
-Projeto fullstack envolvendo react e java
+API extrato bancario
+
+Spring boot;
+spring security;
+JPA
+Hibernate
+Lombok
+H2-Database
