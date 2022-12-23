@@ -1,7 +1,7 @@
 API extrato bancario
 
 Spring boot;
-spring security;
+Spring security;
 JPA;
 Hibernate;
 Lombok;
